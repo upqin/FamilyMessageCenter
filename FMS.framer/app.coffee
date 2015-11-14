@@ -73,8 +73,12 @@ taskView = new Layer
 	y: 1334
 	backgroundColor: "#888"	
 	
-ui = require "StatusBar"
-statusBar = new ui.StatusBar
+statusBar = new Layer
+	width: 740
+	height: 20
+	x: 5
+	y: -20
+	image: "https://raw.githubusercontent.com/upqin/FamilyMessageCenter/master/Status%20Bar%20White.png"
 
 buttonP.on Events.TouchStart, ->
 	buttonP.animate
@@ -87,7 +91,7 @@ buttonP.on Events.TouchEnd, ->
 			opacity: 0
 			blur: 10
 		time: 0.2
-	status.animate
+	statusBar.animate
 		properties: 
 			y: 10
 	taskView.animate
